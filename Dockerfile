@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND noninteractive
 #
 
 ENV NAGIOS_PLUGINS_TAR release-2.2.1.tar.gz
-ENV NAGIOS_PLUGINS_DIR nagioscore-nagios-4.3.2
+ENV NAGIOS_PLUGINS_DIR nagios-plugins-release-2.2.1
 
 # Install missing packages
 RUN apt-get -yqq update && \
@@ -43,11 +43,11 @@ RUN mkdir -p /tmp/nagios-plugins && \
 # wget --no-check-certificate -O nagios-plugins.tar.gz https://github.com/nagios-plugins/nagios-plugins/archive/release-2.2.1.tar.gz
 
 # Compile
-# RUN cd /tmp/nagios/${NAGIOS_PLUGINS_DIR}/ && \
-#    ./tools/setup && \
-#    ./configure && \
-#    make all && \
-#    make install && \
+RUN cd /tmp/nagios-plugins/${NAGIOS_PLUGINS_DIR}/ && \
+    ./tools/setup && \
+    ./configure && \
+    make all && \
+    make install
 #    make clean
 
 # run shell to keep container alive for testing
