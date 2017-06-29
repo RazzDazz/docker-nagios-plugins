@@ -36,7 +36,7 @@ RUN apt-get -yqq update && \
 # Download and extract nagios sourcen
 RUN mkdir -p /tmp/nagios-plugins && \
     cd /tmp/nagios-plugins/ && \
-    wget -O nagios-plugins.tar.gz https://github.com/nagios-plugins/nagios-plugins/archive/$NAGIOS_PLUGINS_TAR} && \
+    wget -O nagios-plugins.tar.gz https://github.com/nagios-plugins/nagios-plugins/archive/${NAGIOS_PLUGINS_TAR} && \
     tar zxvf nagios-plugins.tar.gz && \
     rm -f nagios-plugins.tar.gz
 
