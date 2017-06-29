@@ -43,12 +43,12 @@ RUN mkdir -p /tmp/nagios-plugins && \
 # wget --no-check-certificate -O nagios-plugins.tar.gz https://github.com/nagios-plugins/nagios-plugins/archive/release-2.2.1.tar.gz
 
 # Compile
-RUN cd /tmp/nagios/${NAGIOS_PLUGINS_DIR}/ && \
-    ./tools/setup && \
-    ./configure && \
-    make all && \
-    make install && \
-    make clean
+# RUN cd /tmp/nagios/${NAGIOS_PLUGINS_DIR}/ && \
+#    ./tools/setup && \
+#    ./configure && \
+#    make all && \
+#    make install && \
+#    make clean
 
 # run shell to keep container alive for testing
 CMD  /bin/bash
