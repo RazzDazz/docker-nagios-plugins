@@ -42,8 +42,8 @@ RUN cd /tmp/nagios-plugins/${NAGIOS_PLUGINS_DIR}/ && \
     ./tools/setup && \
     ./configure && \
     make all && \
-    make install
-#    make clean
+    make install && \
+    rm -dfr /tmp/nagios-plugins/
 
 # run shell to keep container alive for testing
 CMD  /bin/bash
