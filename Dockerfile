@@ -3,7 +3,7 @@ MAINTAINER RazzDazz
 # Using instructions from 
 # https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source.html#Ubuntu
 
-ENV REFRESHED_AT 2017-06-24
+ENV REFRESHED_AT 2017-06-30
 ENV DEBIAN_FRONTEND noninteractive
 
 #
@@ -17,20 +17,15 @@ ENV NAGIOS_PLUGINS_DIR nagios-plugins-release-2.2.1
 RUN apt-get -yqq update && \
     apt-get -yqq upgrade && \
     apt-get -yqq install \
-                 autoconf \
-                 gcc \
-                 libc6 \
-                 libmcrypt-dev \
-                 make \
-                 libssl-dev \
-                 wget \
                  bc \
-                 gawk \
-                 dc \
                  build-essential \
-                 snmp \
+                 dc \
+                 gawk \
+                 gettext \
+                 libmcrypt-dev \
                  libnet-snmp-perl \
-                 gettext && \
+                 libssl-dev \
+                 snmp && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and extract nagios sourcen
