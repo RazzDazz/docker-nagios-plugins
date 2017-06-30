@@ -46,4 +46,4 @@ RUN cd /tmp/nagios-plugins/${NAGIOS_PLUGINS_DIR}/ && \
     rm -dfr /tmp/nagios-plugins/
 
 # run nagios
-CMD ["/usr/bin/supervisord"]
+CMD ["/tmp/docker-entrypoint.sh"]
