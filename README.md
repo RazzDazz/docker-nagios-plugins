@@ -1,13 +1,5 @@
 # docker-nagios-plugins
+Docker container to run a nagios core wit plugins installed based on RazzDazz/docker-nagios-core. Tested plattform is a synology nas (RS815+). Should run in a regular docker. But not tested.
 
-## Steps after first start
-- Change password for nagios webadmin user
-
-## Optimization & todos
-- [ ] Write docu how to change default password for nagios webadmin
-
-## Workaround to start nagios
-- open shell
-- htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
-- apache2ctl start
-- /usr/local/nagios/bin/nagios /usr/local/nagios/etc/nagios.cfg
+Further information:
+https://github.com/RazzDazz/docker-nagios-core
