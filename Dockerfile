@@ -1,4 +1,4 @@
-FROM razzle/docker-nagios-core:latest
+FROM razzle/docker-nagios-core:4.3.2
 MAINTAINER RazzDazz
 # Using instructions from 
 # https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source.html#Ubuntu
